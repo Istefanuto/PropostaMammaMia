@@ -815,6 +815,34 @@ img{ max-width:100%; display:block; }
 }
 .footer-logo:hover{ transform: scale(1.05); }
 
+/* Link de contato no footer */
+.footer-contact-link {
+  margin: 10px 0 30px;
+}
+.footer-contact-link a {
+  display: inline-block;
+  background: var(--red);
+  color: var(--cream);
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 0 var(--red-dark);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.footer-contact-link a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--red-dark);
+}
+.footer-contact-link a:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 var(--red-dark);
+}
+.footer-contact-link strong {
+  font-weight: 700;
+}
+
 /* Mascotes decorativos */
 .footer-mascotes{
   position: absolute;
