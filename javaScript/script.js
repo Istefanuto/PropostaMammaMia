@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ===== LOADER ===== */
+  const loader = document.getElementById('loader');
+  if (loader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 600);
+      }, 500); // Pequeno atraso para a animação aparecer bem
+    });
+  }
+
   /* ===== MENU DRAWER ===== */
   const toggle = document.getElementById('navToggle');
   const drawer = document.getElementById('navDrawer');
