@@ -46,17 +46,21 @@ img{ max-width:100%; display:block; }
 
 /* ============ LOADER ============ */
 #loader {
-  position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-  background: var(--red); z-index: 9999;
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh;
+  background: var(--red); z-index: 99999;
   display: flex; justify-content: center; align-items: center;
   transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 #loader.hidden {
   opacity: 0; visibility: hidden;
   transform: translateY(-100vh);
+  pointer-events: none;
 }
 #loader img {
-  width: 150px;
+  width: 160px;
+  max-width: 50vw;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
   animation: spinLoader 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
 }
 @keyframes spinLoader {

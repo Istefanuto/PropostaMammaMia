@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===== LOADER ===== */
   const loader = document.getElementById('loader');
   if (loader) {
+    document.body.style.overflow = 'hidden';
     setTimeout(() => {
       loader.classList.add('hidden');
+      document.body.style.overflow = '';
       setTimeout(() => loader.remove(), 800);
-    }, 2500); // Tempo ideal para animação (2.5s)
+    }, 2500); // 2.5 segundos
   }
 
   /* ===== MENU DRAWER ===== */
